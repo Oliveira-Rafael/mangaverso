@@ -25,7 +25,7 @@ $this->menu=array(
 		'id',
 		'obra',
 		'data_lancamento',
-		/*'editora.editora', //editora->editora ... segundo editora = nome da editora*/
+		'editora.editora', //editora->editora ... segundo editora = nome da editora*/
 		array('label' => 'Autor', 'value' => $model->autorObras[0]->autor->nome . ' ' . $model->autorObras[0]->autor->sobrenome)
 	),
 

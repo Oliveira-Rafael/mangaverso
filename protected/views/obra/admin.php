@@ -48,7 +48,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'obra',
 		'data_lancamento',
-		//array('name' => 'editora_nome', 'isset($data->editora->editora) ? value => $data->editora->editora : ""'), /*Esse é para adicionar a coluna Editora no Manage de Obra*/
+		array('name' => 'editora_nome', 'value' => 'isset($data->editora->editora) ? $data->editora->editora : ""'), /*Esse é para adicionar a coluna Editora no Manage de Obra*/
 		array(
 			'class'=>'CButtonColumn',
 		),

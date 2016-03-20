@@ -3,7 +3,9 @@
 /* @var $model Saga */
 
 $this->breadcrumbs=array(
-    'Sagas'=>array('index'),
+    'Obras' => array('obra/admin'),
+	$model->obra->obra => array('obra/view', 'id'=> $model->obra_id),
+	'Sagas'=>array('admin', 'obra_id'=> $model->obra_id),
     'Manage',
 );
 
