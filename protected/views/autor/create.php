@@ -3,7 +3,7 @@
 /* @var $model Autor */
 
 $this->breadcrumbs=array(
-	'Autors'=>array('index'),
+	'Autores'=>array('index'),
 	'Create',
 );
 

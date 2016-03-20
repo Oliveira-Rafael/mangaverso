@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Obras'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
+	$model->obra=>array('view','id'=>$model->id),
 	'Update',
 );
 
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Obra <?php echo $model->id; ?></h1>
+<h1>Update Obra: <?php echo $model->obra; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

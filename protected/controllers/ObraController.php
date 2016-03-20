@@ -76,6 +76,7 @@ class ObraController extends Controller
 
 			$model->attributes=$_POST['Obra'];
 			if($model->save()) {
+				/*Essa parte, salva na tabela AutorObra*/
 				$autor_id_0 = $_POST['autor_id_0'];
 				$autorObra = new AutorObra;
 				$autorObra->autor_id = $autor_id_0;
@@ -108,7 +109,7 @@ class ObraController extends Controller
 		{
 			$model->attributes=$_POST['Obra'];
 			if($model->save()) {
-				//apagar dados da tabela  autor_obra para recriar as associa
+				//apagar dados da tabela  autor_obra para recriar as associacao
 				AutorObra::model()->deleteAll(array('condition' => 'obra_id = "' . $model->id . '"'));
 
 				$autor_id_0 = $_POST['autor_id_0'];

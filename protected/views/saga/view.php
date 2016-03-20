@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Sagas'=>array('index'),
-	$model->id,
+	$model->saga,
 );
 
 $this->menu=array(
@@ -13,6 +13,7 @@ $this->menu=array(
 	array('label'=>'Update Saga', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Saga', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Saga', 'url'=>array('admin')),
+	array('label'=>'Manage Capitulo', 'url'=>array('capitulo/admin', 'saga_id' => $model->id)),
 );
 ?>
 
@@ -25,5 +26,6 @@ $this->menu=array(
 		'saga',
 		'data_lancamento',
 		'obra_id',
+        'obra.obra',
 	),
 )); ?>

@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Obras'=>array('index'),
-	$model->id,
+	$model->obra, //Para aparecer  Home » Obras » "Dragon Ball"
 );
 
 $this->menu=array(
@@ -17,7 +17,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Obra #<?php echo $model->id; ?></h1>
+<h1>View Obra: <?php echo $model->obra; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -25,7 +25,8 @@ $this->menu=array(
 		'id',
 		'obra',
 		'data_lancamento',
-		'editora.editora', //editora->editora ... segundo editora = nome da editora
+		/*'editora.editora', //editora->editora ... segundo editora = nome da editora*/
 		array('label' => 'Autor', 'value' => $model->autorObras[0]->autor->nome . ' ' . $model->autorObras[0]->autor->sobrenome)
 	),
+
 )); ?>

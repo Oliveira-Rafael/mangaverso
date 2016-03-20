@@ -37,7 +37,7 @@ class Saga extends CActiveRecord
 			array('data_lancamento', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, saga, data_lancamento, obra_id', 'safe', 'on'=>'search'),
+			array('id, saga, data_lancamento, obra_id, obra', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,8 +62,9 @@ class Saga extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'saga' => 'Saga',
-			'data_lancamento' => 'Data Lancamento',
+			'data_lancamento' => 'Data de Lançamento',
 			'obra_id' => 'Obra',
+            'obra' => 'Obra',
 		);
 	}
 
@@ -84,6 +85,7 @@ class Saga extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$criteria->with = array('obra');
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('saga',$this->saga,true);
@@ -105,4 +107,20 @@ class Saga extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    public function beforeSave()
+    {
+        $data = DateTime::createFromFormat('d/m/Y', $this->data_lancamento);
+        $this->data_lancamento = $data->format('Y-m-d');
+        return true;
+    }
+
+
+    public function afterFind()
+    {
+        $data = DateTime::createFromFormat('Y-m-d', $this->data_lancamento);
+        $this->data_lancamento = $data->format('d/m/Y');
+        return true;
+    }
+
 }

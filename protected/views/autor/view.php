@@ -3,8 +3,9 @@
 /* @var $model Autor */
 
 $this->breadcrumbs=array(
-	'Autors'=>array('index'),
-	$model->id,
+	'Autores'=>array('index'),
+	$model->nome . ' ' . $model->sobrenome,
+	//$model->id,
 );
 
 $this->menu=array(
@@ -16,7 +17,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Autor #<?php echo $model->id; ?></h1>
+<h1>View Autor: <?php echo$model->nome . ' ' . $model->sobrenome; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

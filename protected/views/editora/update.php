@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Editoras'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
+	$model->editora=>array('view','id'=>$model->id),
 	'Update',
 );
 
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Editora <?php echo $model->id; ?></h1>
+<h1>Update Editora: <?php echo $model->editora; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -27,7 +27,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'data_lancamento'); ?>
-		<?php echo $form->textField($model,'data_lancamento'); ?>
+		<?php $this->widget('zii.widgets.jui.CJuiDatePicker',
+			array(
+				'model' => $model,
+				'language' => 'pt-BR',
+				'attribute' => 'data_lancamento',
+				'htmlOptions'=>array('readonly' => true)
+			)
+		); ?>
 		<?php echo $form->error($model,'data_lancamento'); ?>
 	</div>
 

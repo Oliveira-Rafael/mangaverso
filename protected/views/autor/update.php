@@ -3,8 +3,8 @@
 /* @var $model Autor */
 
 $this->breadcrumbs=array(
-	'Autors'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
+	'Autores'=>array('index'),
+	$model->nome . ' ' . $model->sobrenome=>array('view','id'=>$model->id),
 	'Update',
 );
 
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Autor <?php echo $model->id; ?></h1>
+<h1>Update Autor: <?php echo $model->nome . ' ' . $model->sobrenome; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

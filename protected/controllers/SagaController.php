@@ -68,11 +68,17 @@ class SagaController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Saga']))
-		{
-			$model->attributes=$_POST['Saga'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		if(isset($_POST['Saga'])) {
+            /*echo '<pre>';
+            print_r($_POST);
+            echo '</pre>';
+            die();*/
+
+            $model->attributes = $_POST['Saga'];
+            if ($model->save()) {
+
+                $this->redirect(array('view', 'id' => $model->id));
+            }
 		}
 
 		$this->render('create',array(

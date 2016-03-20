@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Saga', 'url'=>array('index')),
-	array('label'=>'Manage Saga', 'url'=>array('admin', 'obra_id' => $model->obra_id )), exemplo
+	array('label'=>'Manage Saga', 'url'=>array('admin', 'obra_id' => $model->obra_id )), /*exemplo*/
 );
 ?>
 

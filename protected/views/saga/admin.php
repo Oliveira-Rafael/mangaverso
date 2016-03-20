@@ -3,8 +3,8 @@
 /* @var $model Saga */
 
 $this->breadcrumbs=array(
-	'Sagas'=>array('index'),
-	'Manage',
+    'Sagas'=>array('index'),
+    'Manage',
 );
 
 $this->menu=array(
