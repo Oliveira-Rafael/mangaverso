@@ -8,16 +8,16 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Obra', 'url'=>array('index')),
-	array('label'=>'Create Obra', 'url'=>array('create')),
-	array('label'=>'Update Obra', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Obra', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Obra', 'url'=>array('admin')),
-	array('label'=>'Manage Saga', 'url'=>array('saga/admin', 'obra_id' => $model->id)),
+	array('label'=>'Listar Obra', 'url'=>array('index')),
+	array('label'=>'Criar Obra', 'url'=>array('create')),
+	array('label'=>'Alterar Obra', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Deletar Obra', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Gerenciar Obra', 'url'=>array('admin')),
+	array('label'=>'Gerenciar Saga', 'url'=>array('saga/admin', 'obra_id' => $model->id)),
 );
 ?>
 
-<h1>View Obra: <?php echo $model->obra; ?></h1>
+<h1>Visualizar Obra: <?php echo $model->obra; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

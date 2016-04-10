@@ -6,12 +6,12 @@ $this->breadcrumbs=array(
     'Obras' => array('obra/admin'),
 	$model->obra->obra => array('obra/view', 'id'=> $model->obra_id),
 	'Sagas'=>array('admin', 'obra_id'=> $model->obra_id),
-    'Manage',
+    'Gerenciar',
 );
 
 $this->menu=array(
-	array('label'=>'List Saga', 'url'=>array('index')),
-	array('label'=>'Create Saga', 'url'=>array('create', 'obra_id' => $model->obra_id)),
+	array('label'=>'Listar Saga', 'url'=>array('index')),
+	array('label'=>'Criar Saga', 'url'=>array('create', 'obra_id' => $model->obra_id)),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -28,14 +28,16 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Sagas - <?= $model->obra->obra ?></h1>
+<h1>Gerenciar Sagas - <?= $model->obra->obra ?></h1>
 
-<p>
+<?php
+/*<p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+</p>*/
+?>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php /*echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); */ ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

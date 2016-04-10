@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Obras'=>array('index'),
-	'Create',
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Obra', 'url'=>array('index')),
-	array('label'=>'Manage Obra', 'url'=>array('admin')),
+	array('label'=>'Listar Obra', 'url'=>array('index')),
+	array('label'=>'Gerenciar Obra', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Obra</h1>
+<h1>Criar Obra</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

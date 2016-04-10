@@ -5,17 +5,17 @@
 $this->breadcrumbs=array(
 	'Obras'=>array('index'),
 	$model->obra=>array('view','id'=>$model->id),
-	'Update',
+	'Alterar',
 );
 
 $this->menu=array(
-	array('label'=>'List Obra', 'url'=>array('index')),
-	array('label'=>'Create Obra', 'url'=>array('create')),
-	array('label'=>'View Obra', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Obra', 'url'=>array('admin')),
+	array('label'=>'Listar Obra', 'url'=>array('index')),
+	array('label'=>'Criar Obra', 'url'=>array('create')),
+	array('label'=>'Visualizar Obra', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Gerenciar Obra', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Obra: <?php echo $model->obra; ?></h1>
+<h1>Alterar Obra: <?php echo $model->obra; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

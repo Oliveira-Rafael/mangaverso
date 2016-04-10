@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Capitulos',
+	'Capítulos',
 );
 
 $this->menu=array(
-	array('label'=>'Create Capitulo', 'url'=>array('create')),
-	array('label'=>'Manage Capitulo', 'url'=>array('admin')),
+	array('label'=>'Criar Capítulo', 'url'=>array('create')),
+	array('label'=>'Gerenciar Capítulo', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Capitulos</h1>
+<h1>Capítulos</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Autores'=>array('index'),
-	'Create',
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Autor', 'url'=>array('index')),
-	array('label'=>'Manage Autor', 'url'=>array('admin')),
+	array('label'=>'Listar Autor', 'url'=>array('index')),
+	array('label'=>'Gerenciar Autor', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Autor</h1>
+<h1>Criar Autor</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

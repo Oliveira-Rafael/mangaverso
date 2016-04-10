@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Editora', 'url'=>array('create')),
-	array('label'=>'Manage Editora', 'url'=>array('admin')),
+	array('label'=>'Criar Editora', 'url'=>array('create')),
+	array('label'=>'Gerenciar Editora', 'url'=>array('admin')),
 );
 ?>
 

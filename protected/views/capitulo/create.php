@@ -3,16 +3,16 @@
 /* @var $model Capitulo */
 
 $this->breadcrumbs=array(
-	'Capitulos'=>array('index'),
-	'Create',
+	'Capítulos'=>array('index'),
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Capitulo', 'url'=>array('index')),
-	array('label'=>'Manage Capitulo', 'url'=>array('admin')),
+	array('label'=>'Listar Capítulo', 'url'=>array('index')),
+	array('label'=>'Gerenciar Capítulo', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Capitulo</h1>
+<h1>Criar Capítulo</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

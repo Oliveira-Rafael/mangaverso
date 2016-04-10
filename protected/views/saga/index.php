@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Saga', 'url'=>array('create')),
-	array('label'=>'Manage Saga', 'url'=>array('admin')),
+	array('label'=>'Criar Saga', 'url'=>array('create')),
+	array('label'=>'Gerenciar Saga', 'url'=>array('admin')),
 );
 ?>
 
